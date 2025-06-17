@@ -10,9 +10,9 @@
 
 / {
     behaviors {
-        mousekp: mousekp {
+        mouse_beh: mouse_beh {
             compatible = "zmk,behavior-mouse-key-press";
-            label = "MOUSEKP";
+            label = "MOUSE_BEH";
             #binding-cells = <1>;
         };
     };

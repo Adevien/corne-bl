@@ -27,7 +27,7 @@
 
         func_layer {
             bindings = <&sl 4>;
-            key-positions = <37 15>;
+            key-positions = <37 16>;
         };
     };
 

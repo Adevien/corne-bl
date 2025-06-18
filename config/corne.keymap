@@ -17,6 +17,15 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        control-to-mouse {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -55,7 +64,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
-                        &trans  &mo 3   &trans    &trans  &trans          &trans
+                        &trans  &trans  &trans    &trans  &trans          &trans
             >;
         };
 

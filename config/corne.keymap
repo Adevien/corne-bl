@@ -24,6 +24,11 @@
             bindings = <&mo 3>;
             key-positions = <37 40>;
         };
+
+        func_layer {
+            bindings = <&sl 4>;
+            key-positions = <37 15>;
+        };
     };
 
     keymap {
@@ -42,6 +47,8 @@
 &kp LCTRL   &kp Z  &kp X  &kp C       &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp RALT
                           &kp ESCAPE  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RMETA
             >;
+
+            label = "MAIN";
         };
 
         SYMBOLS {
@@ -52,38 +59,46 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6    &kp N7    &kp N8     &kp N9     &kp N0         &trans
-&trans     &trans  &trans  &trans  &sl 4   &trans    &kp LBKT  &kp RBKT  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
-&kp CLCK   &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans     &trans     &trans         &trans
-                           &trans  &trans  &trans    &trans    &trans    &trans
+&trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5    &kp N6     &kp N7    &kp N8     &kp N9     &kp N0         &trans
+&trans  &none   &none   &none   &none   &none     &kp LBKT   &kp RBKT  &kp MINUS  &kp EQUAL  &kp BACKSLASH  &trans
+&trans  &none   &none   &none   &none   &none     &kp GRAVE  &none     &none      &none      &none          &trans
+                        &trans  &trans  &trans    &trans     &trans    &trans
             >;
+
+            label = "SYMBOLS";
         };
 
         CONTROL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &kp UP_ARROW    &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans          &trans          &trans           &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans          &trans
+&trans  &none  &none  &none   &none   &none     &none   &none           &kp UP_ARROW    &none            &none  &trans
+&trans  &none  &none  &none   &none   &none     &none   &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &none  &trans
+&trans  &none  &none  &none   &none   &none     &none   &none           &none           &none            &none  &trans
+                      &trans  &trans  &trans    &trans  &trans          &trans
             >;
+
+            label = "CONTROL";
         };
 
         MOUSE {
             bindings = <
-&trans  &trans     &trans     &trans     &trans  &msc SCRL_UP      &trans  &trans          &mmv MOVE_UP    &trans           &trans  &trans
-&trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &msc SCRL_DOWN    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans     &trans     &trans     &trans  &trans            &trans  &trans          &trans          &trans           &trans  &trans
+&trans  &none      &none      &none      &none   &msc SCRL_UP      &none   &none           &mmv MOVE_UP    &none            &none  &trans
+&trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &none   &msc SCRL_DOWN    &none   &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &trans
+&trans  &none      &none      &none      &none   &none             &none   &none           &none           &none            &none  &trans
                               &trans     &trans  &trans            &trans  &trans          &trans
             >;
+
+            label = "MOUSE";
         };
 
         SETTINGS {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4          &kp F5      &kp F6         &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&trans  &trans  &trans  &trans          &trans      &trans         &trans  &trans  &trans  &trans   &trans   &trans
-&trans  &trans  &trans  &studio_unlock  &sys_reset  &bootloader    &trans  &trans  &trans  &trans   &trans   &trans
-                        &trans          &to 0       &trans         &trans  &trans  &trans
+&kp F1  &kp F2  &kp F3      &kp F4  &kp F5  &kp F6             &kp F7          &kp F8      &kp F9       &kp F10  &kp F11  &kp F12
+&none   &none   &kp DELETE  &none   &none   &none              &none           &none       &none        &none    &none    &none
+&none   &none   &none       &none   &none   &kp PRINTSCREEN    &studio_unlock  &sys_reset  &bootloader  &none    &none    &none
+                            &trans  &trans  &trans             &trans          &trans      &trans
             >;
+
+            label = "SETTINGS";
         };
 
         layer_5 {

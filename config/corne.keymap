@@ -32,7 +32,7 @@
 
         mouse_layer {
             bindings = <&mo 4>;
-            key-positions = <37 40 31>;
+            key-positions = <37 31 24>;
         };
     };
 

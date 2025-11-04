@@ -12,6 +12,12 @@
 &gresc {
 };
 
+&mt {
+    retro-tap;
+    flavor = "tap-unless-interrupted";
+    tapping-term-ms = <250>;
+};
+
 / {
     behaviors {
         mouse_beh: mouse_beh {

@@ -24,11 +24,6 @@
     combos {
         compatible = "zmk,combos";
 
-        control_layer {
-            bindings = <&mo 2>;
-            key-positions = <37 40>;
-        };
-
         func_layer {
             bindings = <&sl 4>;
             key-positions = <37 16>;
@@ -36,7 +31,7 @@
 
         mouse_layer {
             bindings = <&mo 3>;
-            key-positions = <37 24 40>;
+            key-positions = <37 40>;
         };
     };
 

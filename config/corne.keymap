@@ -5,8 +5,12 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+
+&gresc {
+};
 
 / {
     behaviors {
@@ -21,17 +25,17 @@
         compatible = "zmk,combos";
 
         control_layer {
-            bindings = <&mo 3>;
+            bindings = <&mo 2>;
             key-positions = <37 40>;
         };
 
         func_layer {
-            bindings = <&sl 5>;
+            bindings = <&sl 4>;
             key-positions = <37 16>;
         };
 
         mouse_layer {
-            bindings = <&mo 4>;
+            bindings = <&mo 3>;
             key-positions = <37 24 40>;
         };
     };
@@ -47,10 +51,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E       &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &kp S  &kp D       &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C       &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp LALT
-                          &kp ESCAPE  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp LGUI
+&kp TAB     &kp Q  &kp W        &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
+&kp LSHIFT  &kp A  &mt RCTRL S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL   &kp Z  &kp X        &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &gresc
+                                &kp LALT  &mo 2  &kp SPACE    &kp RET  &mo 1  &kp LGUI
             >;
 
             label = "MAIN";
@@ -67,21 +71,10 @@
 &trans  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5       &kp N6     &kp N7     &kp N8  &kp N9  &kp N0         &trans
 &trans  &none   &none   &none   &none   &kp GRAVE    &kp LBKT   &kp RBKT   &none   &none   &none          &trans
 &trans  &none   &none   &none   &none   &none        &kp MINUS  &kp EQUAL  &none   &none   &kp BACKSLASH  &trans
-                        &trans  &trans  &trans       &trans     &trans     &trans
+                        &trans  &none   &trans       &trans     &none      &trans
             >;
 
             label = "NUMPAD";
-        };
-
-        SYMBOLS {
-            bindings = <
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PERCENT    &kp CARET         &kp AMPS           &kp STAR  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans  &none     &none   &none     &none       &kp GRAVE      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &none     &none                 &none                  &trans
-&trans  &none     &none   &none     &none       &none          &kp MINUS         &kp EQUAL          &none     &none                 &kp BACKSLASH          &trans
-                          &trans    &trans      &trans         &trans            &trans             &trans
-            >;
-
-            label = "SYMBOLS";
         };
 
         CONTROL {
@@ -108,49 +101,13 @@
 
         SETTINGS {
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4      &kp F5  &kp F6             &kp F7          &kp F8      &kp F9       &kp F10  &kp F11  &kp F12
-&none   &none   &none   &kp DELETE  &none   &none              &none           &none       &none        &none    &none    &none
-&none   &none   &none   &none       &none   &kp PRINTSCREEN    &studio_unlock  &sys_reset  &bootloader  &none    &none    &none
-                        &trans      &trans  &trans             &trans          &trans      &trans
+&kp F1  &kp F2           &kp F3  &kp F4      &kp F5  &kp F6             &kp F7          &kp F8      &kp F9       &kp F10         &kp F11  &kp F12
+&trans  &kp PRINTSCREEN  &none   &kp DELETE  &none   &none              &bt BT_PRV      &bt BT_NXT  &bt BT_CLR   &bt BT_CLR_ALL  &none    &none
+&trans  &none            &none   &none       &none   &kp PRINTSCREEN    &studio_unlock  &sys_reset  &bootloader  &none           &none    &none
+                                 &trans      &none   &trans             &trans          &none       &trans
             >;
 
             label = "SETTINGS";
-        };
-
-        layer_6 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_7 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_8 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-        };
-
-        layer_9 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
         };
     };
 };

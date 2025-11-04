@@ -14,8 +14,9 @@
 
 &mt {
     retro-tap;
-    flavor = "tap-unless-interrupted";
+    flavor = "tap-preferred";
     tapping-term-ms = <250>;
+    bindings = <&kp>, <&kp>;
 };
 
 / {

@@ -125,6 +125,8 @@
 &trans  &trans           &trans  &trans    &trans      &trans         &kp MINUS         &kp EQUAL          &trans    &trans                &kp BACKSLASH          &trans
                                  &trans    &none       &trans         &trans            &none              &trans
             >;
+
+            label = "SYMBOLS";
         };
 
         CONTROL {

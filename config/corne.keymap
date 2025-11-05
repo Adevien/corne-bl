@@ -57,7 +57,7 @@
 
         left_control {
             bindings = <&kp LCTRL>;
-            key-positions = <15 14>;
+            key-positions = <16 15>;
         };
 
         right_alt {
@@ -72,7 +72,7 @@
 
         right_control {
             bindings = <&kp RCTRL>;
-            key-positions = <20 21>;
+            key-positions = <20 19>;
         };
 
         capslock_combo {

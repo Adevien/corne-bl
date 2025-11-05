@@ -48,31 +48,37 @@
         left_alt {
             bindings = <&kp LALT>;
             key-positions = <13 14>;
+            layers = <6>;
         };
 
         left_super {
             bindings = <&kp LGUI>;
             key-positions = <14 15>;
+            layers = <6>;
         };
 
         left_control {
             bindings = <&kp LCTRL>;
             key-positions = <16 15>;
+            layers = <6>;
         };
 
         right_alt {
             bindings = <&kp RALT>;
             key-positions = <22 21>;
+            layers = <6>;
         };
 
         right_super {
             bindings = <&kp LGUI>;
             key-positions = <21 20>;
+            layers = <6>;
         };
 
         right_control {
             bindings = <&kp RCTRL>;
             key-positions = <20 19>;
+            layers = <6>;
         };
 
         capslock_combo {
@@ -165,6 +171,15 @@
             >;
 
             label = "SETTINGS";
+        };
+
+        banish {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };

@@ -47,12 +47,12 @@
 
         left_alt {
             bindings = <&kp LALT>;
-            key-positions = <13 16>;
+            key-positions = <13 14>;
         };
 
         left_super {
             bindings = <&kp LGUI>;
-            key-positions = <16 14>;
+            key-positions = <14 15>;
         };
 
         left_control {
@@ -62,12 +62,12 @@
 
         right_alt {
             bindings = <&kp RALT>;
-            key-positions = <22 19>;
+            key-positions = <22 21>;
         };
 
         right_super {
             bindings = <&kp LGUI>;
-            key-positions = <19 21>;
+            key-positions = <21 20>;
         };
 
         right_control {

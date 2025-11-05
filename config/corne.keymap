@@ -16,6 +16,8 @@
     retro-tap;
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
+
+    hold-while-undecided;
 };
 
 / {

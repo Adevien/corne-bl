@@ -37,7 +37,7 @@
 
         mouse_layer {
             bindings = <&mo 4>;
-            key-positions = <37 40>;
+            key-positions = <37 40 24>;
         };
 
         deletecustom {
@@ -78,6 +78,11 @@
         capslock_combo {
             bindings = <&kp CAPSLOCK>;
             key-positions = <12 0>;
+        };
+
+        arrow_layer {
+            bindings = <&mo 3>;
+            key-positions = <37 40>;
         };
     };
 

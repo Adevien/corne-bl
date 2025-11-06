@@ -15,8 +15,6 @@
 &mt {
     retro-tap;
     flavor = "tap-preferred";
-    bindings = <&kp>, <&kp>;
-
     hold-while-undecided;
 };
 
@@ -26,6 +24,16 @@
             compatible = "zmk,behavior-mouse-key-press";
             label = "MOUSE_BEH";
             #binding-cells = <1>;
+        };
+
+        hold_tap_alt: hold_tap_alt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_ALT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            retro-tap;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -105,10 +113,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W           &kp E           &kp R        &kp T        &kp Y    &kp U        &kp I            &kp O            &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &mt LEFT_ALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G        &kp H    &mt RCTRL J  &mt RIGHT_GUI K  &mt RIGHT_ALT L  &kp SEMI  &kp SQT
-&kp GRAVE   &kp Z  &kp X           &kp C           &kp V        &kp B        &kp N    &kp M        &kp COMMA        &kp DOT          &kp FSLH  &kp ESCAPE
-                                   &kp PG_UP       &mo 1        &kp SPACE    &kp RET  &mo 2        &kp PAGE_DOWN
+&kp TAB     &kp Q  &kp W                     &kp E           &kp R        &kp T        &kp Y    &kp U        &kp I            &kp O                      &kp P     &kp BSPC
+&kp LSHIFT  &kp A  &hold_tap_alt LEFT_ALT S  &mt LEFT_GUI D  &mt LCTRL F  &kp G        &kp H    &mt RCTRL J  &mt RIGHT_GUI K  &hold_tap_alt RIGHT_ALT L  &kp SEMI  &kp SQT
+&kp GRAVE   &kp Z  &kp X                     &kp C           &kp V        &kp B        &kp N    &kp M        &kp COMMA        &kp DOT                    &kp FSLH  &kp ESCAPE
+                                             &kp PG_UP       &mo 1        &kp SPACE    &kp RET  &mo 2        &kp PAGE_DOWN
             >;
 
             label = "MAIN";

@@ -34,6 +34,7 @@
             #binding-cells = <2>;
             retro-tap;
             tapping-term-ms = <200>;
+            flavor = "tap-preferred";
         };
     };
 

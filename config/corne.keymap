@@ -35,6 +35,7 @@
             retro-tap;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+            hold-trigger-on-release;
         };
     };
 
